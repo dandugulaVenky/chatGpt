@@ -31,7 +31,7 @@ const App = () => {
       <aside className='sidemenu'>
     <div className='side-menu-button'>
       <span>+</span>
-      New Chat
+      old chat 
 
     </div>
   </aside>
