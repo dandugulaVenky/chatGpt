@@ -5,7 +5,8 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const App = () => {
-
+  
+  const chatMessage = ({message}) => {}
   const [input,setInput] = useState("");
   const [chatLog,setChatLog] = useState([{
     user: "me", message: `How can I help you today?`
@@ -90,6 +91,20 @@ const App = () => {
   className='chat-input-textarea'>
 
   </input>
+
+  <div className={`chat-message $ {message.user === "gpt" && "chatgpt}`}>
+    <div className='chat-message-center'>
+      <div className={`avatar ${message.user === "gpt" && "chatgpt"}`}>
+        {message.user === "gpt"}
+      </div>
+      <div className='message'>
+        {message.message}
+      </div>
+    </div>
+
+  </div>
+
+
   
   </form>
     </div>
@@ -97,6 +112,7 @@ const App = () => {
   </section>
 
     </div>
+    
   )
 }
 
